@@ -1,37 +1,4 @@
-// // import React from "react";
-// import { NavLink } from "react-router-dom";
-// import "./Navbar.css";
-
-// export default function Navbar() {
-//   return (
-//     <nav className="navbar">
-//       <span className="navbar-brand">showmethenews</span>
-//       <NavLink className="nav-item" to="/">
-//         General
-//       </NavLink>
-//       <NavLink className="nav-item" to="/science">
-//         Science
-//       </NavLink>
-//       <NavLink className="nav-item" to="/business">
-//         Business
-//       </NavLink>
-//       <NavLink className="nav-item" to="/technology">
-//         Technology
-//       </NavLink>
-//       <NavLink className="nav-item" to="/health">
-//         Health
-//       </NavLink>
-//       <NavLink className="nav-item" to="/sports">
-//         Sports
-//       </NavLink>
-//       <NavLink className="nav-item" to="/">
-//         Entertainment
-//       </NavLink>
-//     </nav>
-//   );
-// }
-
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 

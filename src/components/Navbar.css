@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   background-color: #343a40;
+  padding: 0.5rem 0;
   margin-bottom: 2.5rem;
 }
 
@@ -46,12 +47,14 @@
 .dropdown {
   position: relative;
   display: none;
-  min-width: 10rem;
   text-align: center;
+  width: 10rem;
 
   background-color: #f9f9f9;
 
   button {
+    width: 10rem;
+
     border: none;
     background-color: #f9f9f9;
     padding: 0.2rem 0.4rem;

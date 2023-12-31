@@ -4,11 +4,8 @@
   row-gap: 1rem;
   align-content: start;
   position: relative;
-
   width: 24rem;
   min-height: 30rem;
-
-  /* border: 1px solid #cccccc29; */
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
   margin-bottom: 1rem;
@@ -62,16 +59,17 @@
 
 .read-more-btn {
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
   background-color: #343a40;
   color: #fff;
   text-decoration: none;
+  text-align: center;
   align-self: end;
   width: 100%;
   transition: ease-in-out 0.2s;
+}
 
-  &:hover {
-    color: #343a40;
-    background-color: #fff;
-  }
+.read-more-btn:hover {
+  color: #343a40;
+  background-color: #fff;
 }

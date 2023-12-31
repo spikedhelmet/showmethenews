@@ -12,15 +12,12 @@ export default function News({ category, country }) {
   document.title = capitalize(category) + " - showmethenews";
 
   const [article, setArticle] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(20);
   const pageSize = 12;
 
   async function getData() {
     try {
-      setLoading(true);
-
       const response = await fetch(
         `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`
       );
@@ -37,8 +34,6 @@ export default function News({ category, country }) {
       setArticle(articles);
     } catch (error) {
       console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
     }
   }
 

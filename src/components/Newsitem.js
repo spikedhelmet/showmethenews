@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Newsitem.css"; // Import your CSS file for styling
+import { useState } from "react";
+import "./Newsitem.css";
 
 const Newsitem = ({
   sourceName,
