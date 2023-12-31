@@ -1,0 +1,59 @@
+.btn-cont {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+  row-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  min-width: 8rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    color: #343a40;
+    background-color: #fff;
+    border: none;
+  }
+}
+
+.btn-dark[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
