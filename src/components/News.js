@@ -23,12 +23,12 @@ export default function News({ category, country }) {
       //   `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`
       // );
 
-      var req = new Request(url);
+      let req = new Request(url);
 
       let response = await fetch(req);
 
       if (!response.ok) {
-        throw new Error("Failed to fetch data");
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
@@ -38,7 +38,8 @@ export default function News({ category, country }) {
       setTotalResults(totalResults);
       setArticle(articles);
     } catch (error) {
-      console.error(`Error fetching data:${error}`);
+      console.error(`Error fetching data:${error.message}`);
+      throw error;
     }
   }
 

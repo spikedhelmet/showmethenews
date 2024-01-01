@@ -51,7 +51,7 @@ const Newsitem = ({
         {publishDate ? new Date(publishDate).toLocaleDateString() : " date"}
       </span>
       <a href={url} className="read-more-btn">
-        Read In Source
+        Read the source
       </a>
     </article>
   );
