@@ -6,7 +6,7 @@ function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-const apiKey = "9b6df3b19dd44512a22e89512556da3e";
+const apiKey = "0933136b7bfa46bcb1ea76156736a4a9";
 
 export default function News({ category, country }) {
   document.title = capitalize(category) + " - showmethenews";

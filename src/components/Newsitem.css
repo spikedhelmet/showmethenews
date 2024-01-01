@@ -29,7 +29,7 @@
 .news-title {
   font-size: 1.25rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: justify;
   padding: 0rem 1rem;
@@ -67,6 +67,7 @@
   align-self: end;
   width: 100%;
   transition: ease-in-out 0.2s;
+  font-weight: 500;
 }
 
 .read-more-btn:hover {
