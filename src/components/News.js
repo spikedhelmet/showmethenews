@@ -33,13 +33,14 @@ export default function News({ category, country }) {
       setTotalResults(totalResults);
       setArticle(articles);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching data:", error.message);
     }
   }
 
   useEffect(() => {
     getData();
     document.title = capitalize(category) + " - showmethenews";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, category]);
 
   const handlePrevClick = () => {
