@@ -33,7 +33,7 @@ export default function News({ category, country }) {
       setTotalResults(totalResults);
       setArticle(articles);
     } catch (error) {
-      console.error("Error fetching data:", error.message);
+      console.error(`Error fetching data:${error}`);
     }
   }
 
