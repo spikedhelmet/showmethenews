@@ -18,9 +18,14 @@ export default function News({ category, country }) {
 
   async function getData() {
     try {
-      const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`
-      );
+      const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`;
+      // const url = await fetch(
+      //   `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`
+      // );
+
+      var req = new Request(url);
+
+      let response = await fetch(req);
 
       if (!response.ok) {
         throw new Error("Failed to fetch data");
