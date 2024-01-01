@@ -5,9 +5,9 @@ import "./Navbar.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(true);
 
-  const toggleNav = () => {
+  function toggleNav() {
     setIsOpen(!isOpen);
-  };
+  }
 
   return (
     <nav className="navbar">

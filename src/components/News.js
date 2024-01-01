@@ -19,12 +19,7 @@ export default function News({ category, country }) {
   async function getData() {
     try {
       const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`;
-      // const url = await fetch(
-      //   `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=12`
-      // );
-
       let req = new Request(url);
-
       let response = await fetch(req);
 
       if (!response.ok) {
@@ -32,7 +27,6 @@ export default function News({ category, country }) {
       }
 
       const data = await response.json();
-
       const { articles, totalResults } = data;
 
       setTotalResults(totalResults);
@@ -49,16 +43,16 @@ export default function News({ category, country }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, category]);
 
-  const handlePrevClick = () => {
+  function handlePrevClick() {
     if (page > 1) {
       setPage((prevPage) => prevPage - 1);
     }
-  };
+  }
 
-  const handleNextClick = () => {
+  function handleNextClick() {
     setPage((prevPage) => prevPage + 1);
     console.log(pageSize);
-  };
+  }
 
   return (
     <div className="container text-center">

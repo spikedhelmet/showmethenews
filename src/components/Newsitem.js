@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Newsitem.css";
 
-const Newsitem = ({
+function Newsitem({
   sourceName,
   imageUrl,
   title,
@@ -9,12 +9,12 @@ const Newsitem = ({
   author,
   publishDate,
   url,
-}) => {
+}) {
   const [showFullText, setShowFullText] = useState(false);
 
-  const toggleText = () => {
+  function toggleText() {
     setShowFullText(!showFullText);
-  };
+  }
 
   const descString = JSON.stringify(description);
 
@@ -55,6 +55,6 @@ const Newsitem = ({
       </a>
     </article>
   );
-};
+}
 
 export default Newsitem;
